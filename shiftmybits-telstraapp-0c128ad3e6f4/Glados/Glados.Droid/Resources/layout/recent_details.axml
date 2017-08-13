@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="@drawable/listselector2">
+    <LinearLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dip"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/image_bg"
+        android:layout_marginRight="5dip">
+        <refractored.controls.CircleImageView
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            local:civ_border_width="1dp"
+            local:civ_border_color="#02d933"
+            android:src="@drawable/user_icon" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:textColor="#040404"
+        android:typeface="sans"
+        android:textSize="15dip"
+        android:id="@+id/recent_person"
+        local:MvxBind="Text RespondentFullName" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recent_person"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:id="@+id/recent_role"
+        android:textColor="#343434"
+        android:textSize="10dip"
+        local:MvxBind="Text RespondentDepartment" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recent_leave"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/recent_person"
+        android:textSize="10dip"
+        android:textColor="#9E9E9E"
+        android:textStyle="bold"
+        local:MvxBind="Text RequestedAtString" />
+</RelativeLayout>

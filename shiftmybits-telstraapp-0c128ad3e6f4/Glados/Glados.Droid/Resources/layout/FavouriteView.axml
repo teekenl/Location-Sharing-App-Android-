@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Mvx.MvxGridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        local:MvxBind="ItemsSource FavouriteContacts; ItemClick SelectFavouriteCommand"
+        local:MvxItemTemplate="@layout/favourite_details"
+        android:verticalSpacing="3dp"
+        android:horizontalSpacing="3dp"
+        android:listSelector="@drawable/listSelector2"
+        android:stretchMode="columnWidth"
+        android:numColumns="2"
+        android:layout_margin="3dp" />
+</LinearLayout>

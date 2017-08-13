@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent">
+    <ImageView
+        android:src="@drawable/glados"
+        android:layout_width="200.0dp"
+        android:layout_height="80.0dp"
+        android:id="@+id/imageView1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150.0dp" />
+    <AutoCompleteTextView
+        android:layout_width="290.0dp"
+        android:layout_height="wrap_content"
+        android:hint="Name or Department"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        android:id="@+id/AutoCompleteInput"
+        android:background="@drawable/EditTextStyle"
+        android:layout_marginTop="30.0dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        local:MvxBind="Text SearchTerm" />
+    <Button
+        android:text="Request"
+        android:layout_width="100.0dp"
+        android:layout_height="50.0dp"
+        android:id="@+id/requestButton"
+        android:layout_marginTop="30.0dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#0050A0"
+        local:MvxBind="Click SendRequestCommand" />
+</LinearLayout>

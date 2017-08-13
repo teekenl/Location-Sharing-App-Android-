@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dip"
+        android:background="#3498db">
+        <ImageView
+            android:layout_marginTop="35dip"
+            android:id="@+id/imageview1"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:src="@drawable/tick"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:id="@+id/respondentName"
+            local:MvxBind="Text ResponseSender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageview1"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:textSize="35dip" />
+        <TextView
+            android:id="@+id/respondentMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            local:MvxBind="Text ResponseMessage"
+            android:padding="5dip"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_below="@+id/respondentName"
+            android:textColor="#ffffff"
+            android:textSize="17dip" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dip">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="10dp"
+            android:clickable="true"
+            android:id="@+id/callFrame"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView
+                android:id="@+id/callButton"
+                android:layout_width="25dip"
+                android:layout_height="30dip"
+                android:src="@drawable/response_call" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call"
+                android:textSize="25dip"
+                android:layout_marginLeft="45dip" />
+        </FrameLayout>
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="end"
+            android:background="#d9d4d4" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="10dp"
+            android:clickable="true"
+            android:id="@+id/sendMessageFrame"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView
+                android:id="@+id/sendButton"
+                android:layout_width="25dip"
+                android:layout_height="30dip"
+                android:src="@drawable/response_message" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send Message"
+                android:textSize="25dip"
+                android:layout_marginLeft="45dip" />
+        </FrameLayout>
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d9d4d4" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="10dp"
+            android:clickable="true"
+            android:id="@+id/naviBackFrame"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="25dip"
+                android:layout_height="30dip"
+                android:src="@drawable/back" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:textSize="25dip"
+                android:layout_marginLeft="45dip" />
+        </FrameLayout>
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d9d4d4" />
+    </LinearLayout>
+</LinearLayout>
